@@ -2,27 +2,34 @@
 *.slo
 *.lo
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
 
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
-
-# Fortran module files
-*.mod
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
-*.lib
 
-# Executables
-*.exe
+*~
 *.out
-*.app
+*.pyc
+TAGS
+\#*
+.\#*
+*.core
+
+*.bam
+*.bam.bai
+.DS_Store
+
+/data/
+/external/
+/output/
+/bin/
+
+/data
+/external
+/output
+/bin
