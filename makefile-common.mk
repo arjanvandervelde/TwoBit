@@ -1,18 +1,18 @@
 UNAME_S := $(shell uname -s)
-CPP = g++-mp-4.8
+CPP = clang++
 LOCAL_PATH = $(EXT_PATH)/local
 
 # clang++
 CXXFLAGS = -std=c++11 -stdlib=libc++ -Wall
-CXXOPT = -O2 -march=native -mtune=native -funroll-loops -fstack-protector
+CXXOPT = -O2 -march=native -mtune=native -funroll-loops -fstack-protector -ffast-math
 
 # g++
-CXXFLAGS = -std=c++11 -Wall
-ifeq ($(UNAME_S),Darwin)
-    CXXOPT = -O2 -funroll-loops --fast-math
-else
-    CXXOPT = -O2 -march=native -mtune=native -funroll-loops --fast-math
-endif
+#CXXFLAGS = -std=c++11 -Wall
+#ifeq ($(UNAME_S),Darwin)
+#    CXXOPT = -O2 -funroll-loops --fast-math
+#else
+#    CXXOPT = -O2 -march=native -mtune=native -funroll-loops --fast-math
+#endif
 
 CXXDEBUG = -g -gstabs+
 LOCALTOOLS = -I$(LOCAL_PATH)

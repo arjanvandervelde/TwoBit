@@ -1,6 +1,6 @@
 include makefile-common.mk
-#CPP = clang++
-CPP = g++-mp-4.8
+CPP = clang++
+#CPP = g++-4.8
 STRIP = strip
 AR = ar
 
